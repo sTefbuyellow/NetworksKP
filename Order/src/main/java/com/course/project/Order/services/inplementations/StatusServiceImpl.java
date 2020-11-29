@@ -5,9 +5,11 @@ import com.course.project.Order.repos.StatusRepository;
 import com.course.project.Order.services.interfaces.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StatusServiceImpl implements StatusService {
 
     @Autowired

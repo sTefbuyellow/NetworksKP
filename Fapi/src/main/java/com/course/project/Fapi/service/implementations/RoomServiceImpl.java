@@ -26,7 +26,7 @@ public class RoomServiceImpl implements RoomService {
     
     @Override
     public Room create(Room room) {
-        return restTemplate.postForObject(backendApiProperties.getStatusUri(), room, Room.class);
+        return restTemplate.postForObject(backendApiProperties.getRoomUri(), room, Room.class);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public List<Room> getAll(int page, int size) {
         return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject(backendApiProperties.getRoomUri()
-                + "/find-all/?pageNo=" + page + "&pageSize=" + size, Room[].class)));
+                + "/find-all?pageNo=" + page + "&pageSize=" + size, Room[].class)));
     }
 
     @Override

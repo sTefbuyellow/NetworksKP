@@ -1,0 +1,29 @@
+.regForm {
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  background-color: #24292e;
+}
+
+.form-group{
+  background-color: gray;
+}
+
+.form-group:focus{
+  background-color: black;
+}
+
+.form-control{
+  background-color: beige;
+}
+
+.btn-primary:hover{
+  background-color: #24292e;
+}
+
+.btn-secondary:focus{
+  background-color: black;
+}
+

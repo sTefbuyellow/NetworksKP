@@ -1,0 +1,18 @@
+<div class="home">
+  <div class="title"></div>
+  <div class="body">
+     <a>Here must be list of rooms</a>
+    <div class="row" *ngFor="let room of rooms | async">
+      <div class="page">
+        <h3><a href="/page/{{room.id}}" class="name">{{room.description}}</a></h3>
+        <div>
+          <i class="fas fa-user"></i> Area: <p>{{room.area}}</p>
+        </div>
+        <p [innerHTML]="room.statusId"></p>
+        <hr>
+      </div>
+      <hr>
+    </div>
+
+  </div>
+</div>
