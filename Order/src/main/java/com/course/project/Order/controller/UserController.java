@@ -22,6 +22,11 @@ public class UserController {
          return userService.fromUserToDto(userService.create(userService.fromDtoToUser(userDto)));
     }
 
+    @GetMapping("/id/{id}")
+    public UserDto findById(@PathVariable @RequestBody Long id){
+        return userService.fromUserToDto(userService.findById(id));
+    }
+
     @GetMapping("/{name}")
     public UserDto findByName(@PathVariable @RequestBody String name){
         return userService.fromUserToDto(userService.findByName(name));

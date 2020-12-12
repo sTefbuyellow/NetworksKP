@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(long id) {
-        return restTemplate.getForObject(backendApiProperties.getUserUri() + "/" + id, User.class);
+        return restTemplate.getForObject(backendApiProperties.getUserUri() + "/id/" + id, User.class);
     }
 
 

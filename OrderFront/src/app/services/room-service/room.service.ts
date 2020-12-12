@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {RoomPayload} from '../../modules/room-payloud';
+import {RoomPayload} from '../../modules/room-payload';
 import {Observable} from 'rxjs';
 
 @Injectable({

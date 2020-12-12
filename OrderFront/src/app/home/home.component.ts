@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RoomPayload} from '../modules/room-payloud';
+import {Component, OnInit } from '@angular/core';
+import {RoomPayload} from '../modules/room-payload';
 import {Router} from '@angular/router';
 import {RoomService} from '../services/room-service/room.service';
 import {Observable} from 'rxjs';
@@ -16,19 +16,6 @@ export class HomeComponent implements OnInit {
 
   rooms: Observable<Array<RoomPayload>>;
   ngOnInit(): void {
-    this.roomPayload = {
-      id: '1',
-      description: 'bla',
-      area: '69',
-      statusId: '1'
-    };
-    this.roomService.addRoom(this.roomPayload).subscribe(data => {
-      this.router.navigateByUrl('/');
-    }, error => {
-      console.log(this.roomPayload);
-    });
-
-  //  this.rooms = this.roomService.getAllPages();
   }
 
 

@@ -1,0 +1,19 @@
+<body>
+<div class="add-request-content">
+  <div class="container">
+    <div>
+      <h3 class="new-request-title">Добавить запрос</h3>
+    </div>
+    <hr>
+    <form [formGroup]="addRequestForm" (ngSubmit)="addRequest()">
+      <div class="form-group">
+        <label class="request-describing">Описание</label>
+        <editor [formControlName]="'describing'" [init]="{plugins: 'link'}"></editor>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-secondary btn-block">Создать</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>

@@ -4,14 +4,14 @@ import lombok.Data;
 
 @Data
 public class UserRole {
-    private long id;
-    private String userRole;
+    private String id;
+    private String role;
 
     public String getUserRole() {
-        return userRole;
+        return role;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 }

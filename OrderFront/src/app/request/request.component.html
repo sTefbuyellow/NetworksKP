@@ -1,0 +1,29 @@
+<body>
+<div class="loginForm">
+  <div class="container">
+    <h2 class="h3 mb-3 font-weight-normal title">Описание необходимой комнаты</h2>
+      <div class="description form-group">
+        <div [innerHTML]="request.describing"></div>
+      </div>
+      <button class="button1 btn btn-lg btn-secondary btn-block" (click)="onClick()">Выбрать подходящую комнату</button>
+    <div class="rooms" *ngIf="roomsBool">
+      <div class="row" *ngFor="let room of rooms | async">
+        <div class="page">
+          <div class="row">
+          <h2 class="col-md-1">{{room.id}}</h2>
+            <div class="col-md-3">
+            <button class="button2 btn btn-lg btn-secondary btn-block" (click)="onClick()">Выбрать</button>
+            </div>
+          </div>
+          <hr>
+          <div href="/request/{{room.id}}" class="status" [innerHTML]="room.description">{{room.id}}</div>
+          <div *ngIf="isFree(room)">Статус: свободна </div>
+          <div *ngIf="!isFree(room)">Статус: занята </div>
+          <hr>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

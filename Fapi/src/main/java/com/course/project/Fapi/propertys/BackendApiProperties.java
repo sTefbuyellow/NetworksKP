@@ -17,7 +17,7 @@ public class BackendApiProperties {
     }
 
     public String getUserRoleUri() {
-        return backUri + "/user-role";
+        return backUri + "/role";
     }
 
     public String getRoomUri() {

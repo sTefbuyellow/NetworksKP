@@ -21,7 +21,6 @@ public class RequestServiceImpl implements RequestService {
     private final RestTemplate restTemplate;
 
     public RequestServiceImpl(RestTemplateBuilder restTemplateBuilder) {
-
         this.restTemplate = restTemplateBuilder.build();
     }
 
@@ -39,6 +38,11 @@ public class RequestServiceImpl implements RequestService {
     public List<Request> getAll(int page, int size) {
         return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject(backendApiProperties.getRequestUri()
                 + "/find-all/?pageNo=" + page + "&pageSize=" + size, Request[].class)));
+    }
+
+    public List<Request> getAllById(Long id) {
+        return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject(backendApiProperties.getRequestUri()
+                + "/find-all/" + id, Request[].class)));
     }
 
     @Override

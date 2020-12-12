@@ -9,12 +9,12 @@
   text-decoration: none;
 }
 
-.loginHref,.signUpHref{
+.loginHref,.signUpHref,.createRoom,.logout,.profile{
   color: beige;
   text-decoration: none;
   float: right;
   padding-top: 10px;
   padding-right: 5px;
-
 }
+
 

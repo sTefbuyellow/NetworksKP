@@ -17,18 +17,18 @@ public class RoomController {
     private RoomServiceImpl roomService;
 
     @PostMapping
-    public ResponseEntity create(@RequestBody Room room){
-         roomService.create(room);
-         return new ResponseEntity(HttpStatus.OK);
+    public ResponseEntity create(@RequestBody Room room) {
+        roomService.create(room);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public Room get(@PathVariable Long id){
+    public Room get(@PathVariable Long id) {
         return roomService.findById(id);
     }
 
     @GetMapping("/find-all")
-    public List<Room> findAll(@RequestParam int pageNo, @RequestParam int pageSize){
-        return roomService.getAll(pageNo,pageSize);
+    public List<Room> findAll(@RequestParam int pageNo, @RequestParam int pageSize) {
+        return roomService.getAll(pageNo, pageSize);
     }
 }

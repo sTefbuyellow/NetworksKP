@@ -1,6 +1,6 @@
-export class RoomPayload  {
+export class RoomPayload{
   id: string;
-  description: string;
   area: string;
+  description: string;
   statusId: string;
 }

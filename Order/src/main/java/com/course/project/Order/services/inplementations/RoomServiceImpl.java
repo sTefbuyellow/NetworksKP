@@ -31,6 +31,7 @@ public class RoomServiceImpl implements RoomService {
         return roomRepository.findRoomById(id);
     }
 
+
     @Override
     public List<RoomDto> getAll(int page, int size) {
         List<Room> rooms = roomRepository.findAll(PageRequest.of(page, size)).getContent();
@@ -66,7 +67,7 @@ public class RoomServiceImpl implements RoomService {
         roomDto.setId(Long.toString(room.getId()));
         roomDto.setArea(Long.toString(room.getArea()));
         roomDto.setDescription(room.getDescription());
-        roomDto.setStatusId(Long.toString(room.getStatusId().getId()));
+        roomDto.setStatusId(room.getStatusId().getRoomStatus());
         return roomDto;
     }
 }

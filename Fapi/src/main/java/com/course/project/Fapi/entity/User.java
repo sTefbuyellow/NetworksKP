@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 public class User {
 
+    private String id;
     private String name;
     private String secondName;
     private String email;
@@ -55,4 +56,9 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getId() {
+        return id;
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.course.project.Order.dto;
 
 public class UserDto {
+    private String id;
     private String name;
     private String secondName;
     private String email;
@@ -45,5 +46,13 @@ public class UserDto {
 
     public void setRoleId(String roleId) {
         this.roleId = roleId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

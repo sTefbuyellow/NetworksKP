@@ -1,5 +1,6 @@
 package com.course.project.Order.services.inplementations;
 
+import com.course.project.Order.dto.UserRoleDto;
 import com.course.project.Order.model.UserRole;
 import com.course.project.Order.repos.UserRoleRepository;
 import com.course.project.Order.services.interfaces.UserRoleService;
@@ -38,5 +39,12 @@ public class UserRoleServiceImpl implements UserRoleService {
     @Override
     public int getSize() {
         return (int) userRoleRepository.count();
+    }
+
+    public UserRoleDto fromRoleToDto(UserRole userRole) {
+        UserRoleDto userRoleDto = new UserRoleDto();
+        userRoleDto.setId(userRole.getId().toString());
+        userRoleDto.setRole(userRole.getRole());
+        return userRoleDto;
     }
 }

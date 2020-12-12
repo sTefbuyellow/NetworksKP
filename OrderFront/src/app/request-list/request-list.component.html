@@ -1,0 +1,15 @@
+<body>
+<div class="loginForm">
+  <div class="container">
+      <h1 class="title h3 mb-3 font-weight-normal title">Список запросов</h1>
+      <div class="request-list">
+        <div class="row" *ngFor="let request of requests | async">
+          <div class="page">
+            <a href="/request/{{request.id}}" class="status" *ngIf="isProcessing(request)">{{request.id}}: Ожидает обработки<hr></a>
+          </div>
+          <hr>
+        </div>
+      </div>
+  </div>
+</div>
+</body>

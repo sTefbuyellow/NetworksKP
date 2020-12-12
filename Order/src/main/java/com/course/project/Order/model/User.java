@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.*;
 import javax.persistence.Table;
+import java.util.List;
 
 
 @Getter
@@ -37,8 +38,8 @@ public class User {
     @JoinColumn(name = "user_role_id", referencedColumnName = "id")
     private UserRole roleId;
 
-    @OneToOne(mappedBy = "userId",cascade = CascadeType.ALL)
-    private Request request;
+    @OneToMany(mappedBy = "userId",cascade = CascadeType.ALL)
+    private List<Request> request;
 
     public Long getId() {
         return id;

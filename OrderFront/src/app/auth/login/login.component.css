@@ -1,0 +1,33 @@
+.loginForm{
+  width: 500px;
+  height: 250px;
+  background-color: #24292e;
+}
+
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 94vh;
+  background-color: #596571;
+}
+
+.upper{
+  background-color: gray;
+}
+
+.title{
+  padding-top: 20px;
+  color: beige;
+}
+
+.btn-secondary{
+  color: beige;
+}
+
+.btn-secondary:focus{
+  background-color: black;
+}

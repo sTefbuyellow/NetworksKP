@@ -1,10 +1,17 @@
 .regForm {
   width: 500px;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
+  height: 430px;
   background-color: #24292e;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 94vh;
+  background-color: #596571;
 }
 
 .form-group{
@@ -19,11 +26,17 @@
   background-color: beige;
 }
 
-.btn-primary:hover{
-  background-color: #24292e;
+.btn-secondary{
+  color: beige;
 }
 
 .btn-secondary:focus{
   background-color: black;
 }
+
+.title{
+  padding-top: 20px;
+  color: beige;
+}
+
 

@@ -1,0 +1,32 @@
+<body>
+<div class="profileForm">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="userName col-md-6">
+            <div class="name">Имя: {{user.name}} {{user.secondName}}</div>
+          </div>
+        </div>
+          <hr>
+            <div class="email">Почта: {{user.email}} </div>
+          <hr>
+          <div class="col-md-6">
+            <form class="editForm">
+              <div class="container">
+                <div class="row" *ngFor="let request of requests | async">
+                  <div class="page">
+                    <div class="status" *ngIf="!isProcessing(request)">{{request.id}}: Запрос обработан!</div>
+                    <div class="status" *ngIf="isProcessing(request)">{{request.id}}: Ожидает обработки</div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+              <hr>
+              <button class="button btn btn-lg btn-secondary btn-block" (click)="deleteUser()">Удалить профиль</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>

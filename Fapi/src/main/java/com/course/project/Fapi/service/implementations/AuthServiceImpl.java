@@ -50,7 +50,7 @@ public class AuthServiceImpl implements AuthService {
         String authenticationToken = jwtProvider.generateToken(authenticate);
         org.springframework.security.core.userdetails.User principal = (org.springframework.security.core.userdetails.User)SecurityContextHolder
                 .getContext().getAuthentication().getPrincipal();
-        return new AuthenticationResponse(authenticationToken, user.getName(), principal.getAuthorities().toString());
+        return new AuthenticationResponse(authenticationToken, user.getName(), principal.getAuthorities().toString(), user.getId());
     }
 
     public Optional<org.springframework.security.core.userdetails.User> getCurrentUser(){
