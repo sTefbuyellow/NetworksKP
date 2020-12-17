@@ -12,7 +12,7 @@
           <div class="row">
           <h2 class="col-md-1">{{room.id}}</h2>
             <div class="col-md-3">
-            <button class="button2 btn btn-lg btn-secondary btn-block" (click)="onClick()">Выбрать</button>
+            <button class="button2 btn btn-lg btn-secondary btn-block" (click)="refresh(room)" *ngIf="isFree(room)">Выбрать</button>
             </div>
           </div>
           <hr>

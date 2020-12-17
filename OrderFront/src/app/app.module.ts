@@ -47,6 +47,7 @@ import { RequestComponent } from './request/request.component';
       {path: 'add-room', component: AddRoomComponent, canActivate: [AuthGuard]},
       {path: 'add-request', component: AddRequestComponent, canActivate: [AuthGuard]},
       {path: 'requests', component: RequestListComponent, canActivate: [AuthGuard]},
+      {path: 'rooms', component: RoomsListComponent, canActivate: [AuthGuard]},
       {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
       {path: 'request/:id', component: RequestComponent, canActivate: [AuthGuard]}
     ]),

@@ -7,8 +7,8 @@
           <div class="page">
             <a href="/request/{{request.id}}" class="status" *ngIf="isProcessing(request)">{{request.id}}: Ожидает обработки<hr></a>
           </div>
-          <hr>
         </div>
+        <div class="status" *ngIf="!isThereElements">Нет активных запросов</div>
       </div>
   </div>
 </div>

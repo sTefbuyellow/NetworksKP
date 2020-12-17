@@ -25,7 +25,6 @@ public class AuthServiceImpl implements AuthService {
     private UserRoleServiceImpl userRoleService;
     @Autowired
     private AuthenticationManager authenticationManager;
-
     @Autowired
     private JwtProvider jwtProvider;
 

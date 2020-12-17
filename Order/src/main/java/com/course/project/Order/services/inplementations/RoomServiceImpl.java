@@ -61,6 +61,8 @@ public class RoomServiceImpl implements RoomService {
         return room;
     }
 
+
+
     @Override
     public RoomDto fromRoomToDto(Room room){
         RoomDto roomDto = new RoomDto();

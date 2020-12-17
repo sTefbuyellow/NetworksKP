@@ -1,0 +1,31 @@
+.rooms-list{
+  padding-top: 30px;
+  width: 800px;
+  background-color: #24292e;
+  padding-bottom: 30px;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 94vh;
+  background-color: #596571;
+}
+
+.title{
+  color: beige;
+}
+
+.status{
+  color: beige;
+  font-size: 20px;
+}
+
+.page{
+  color: beige;
+  padding-left: 50px;
+}
+

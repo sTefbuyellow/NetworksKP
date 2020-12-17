@@ -1,16 +1,17 @@
 <body>
-<div class="room-list">
+<div class="loginForm">
   <div class="container">
     <h1 class="title h3 mb-3 font-weight-normal title">Список комнат</h1>
-    <div class="request-list">
+    <div class="rooms-list">
       <div class="row" *ngFor="let room of rooms | async">
         <div class="page">
-          <a href="/request/{{room.id}}" class="status" [innerHTML]="room.description"><hr></a>
+          <div href="/request/{{room.id}}" class="status" [innerHTML]="room.description">{{room.id}}</div>
           <div *ngIf="isFree(room)">Статус: свободна </div>
           <div *ngIf="!isFree(room)">Статус: занята </div>
+          <hr>
         </div>
-        <hr>
       </div>
+      <div class="status" *ngIf="!isThereRooms">Нет информации о комнатах</div>
     </div>
   </div>
 </div>

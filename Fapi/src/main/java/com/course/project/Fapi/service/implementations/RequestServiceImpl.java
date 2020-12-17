@@ -1,6 +1,7 @@
 package com.course.project.Fapi.service.implementations;
 
 import com.course.project.Fapi.entity.Request;
+import com.course.project.Fapi.entity.Room;
 import com.course.project.Fapi.propertys.BackendApiProperties;
 import com.course.project.Fapi.service.interfaces.RequestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +55,9 @@ public class RequestServiceImpl implements RequestService {
     public int getSize() {
         return Objects.requireNonNull(restTemplate.getForObject
                 (backendApiProperties.getRequestUri()+"/size", Integer.class));
+    }
+
+    public Request refreshRequest(Room room, Long id) {
+        return restTemplate.postForObject(backendApiProperties.getRequestUri()+"/refresh/"+id, room, Request.class);
     }
 }

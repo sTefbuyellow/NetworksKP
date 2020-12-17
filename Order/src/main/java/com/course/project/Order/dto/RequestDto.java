@@ -1,10 +1,16 @@
 package com.course.project.Order.dto;
 
+import com.course.project.Order.model.Request;
+
 public class RequestDto {
     private String id;
     private String userId;
     private String roomId;
     private String describing;
+
+    public RequestDto(){
+        this.roomId = null;
+    }
 
     public String getId() {
         return id;

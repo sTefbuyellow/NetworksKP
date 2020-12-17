@@ -13,6 +13,6 @@ export class RequestListService {
 
 
   getAllRequests(): Observable<Array<RequestPayload>> {
-    return this.httpClient.get<Array<RequestPayload>>('http://localhost:8081/request/find-all?pageNo=0&pageSize=5');
+    return this.httpClient.get<Array<RequestPayload>>('http://localhost:8081/request/find-all?pageNo=0&pageSize=10');
   }
 }

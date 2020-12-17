@@ -34,6 +34,9 @@ public class Request {
         return id;
     }
 
+    public Request(){
+        this.roomId = null;
+    }
 
     public User getUserId() {
         return userId;

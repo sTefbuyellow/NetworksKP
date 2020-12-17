@@ -1,16 +1,18 @@
 <div class="header">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h1><a href="" class="homeHref">Отель "Кобринка"</a></h1>
       </div>
-      <div class="col-md-3" *ngIf="authService.isAuthenticated()">
+      <div class="col-md-5" *ngIf="authService.isAuthenticated()">
         <div class="block1" *ngIf="authService.isAdmin()">
           <a href="/add-room" class="createRoom">Дабавить комнату</a>
           <a href="/requests" class="createRoom">Список запросов</a>
+          <a href="/rooms" class="createRoom">Список комнат</a>
         </div>
         <div class="block2" *ngIf="authService.isUser()">
           <a href="/add-request" class="createRoom">Дабавить запрос</a>
+          <a href="/rooms" class="createRoom">Мои комнаты</a>
         </div>
       </div>
       <div class="col-md-3" *ngIf="authService.isAuthenticated()">

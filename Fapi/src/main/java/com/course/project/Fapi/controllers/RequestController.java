@@ -1,6 +1,7 @@
 package com.course.project.Fapi.controllers;
 
 import com.course.project.Fapi.entity.Request;
+import com.course.project.Fapi.entity.Room;
 import com.course.project.Fapi.service.implementations.RequestServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,5 +36,10 @@ public class RequestController {
     @GetMapping("/find-all/{id}")
     public List<Request> findAll(@PathVariable Long id){
         return requestService.getAllById(id);
+    }
+
+    @PostMapping("/refresh/{id}")
+    public Request refresh(@RequestBody Room room, @PathVariable Long id){
+        return requestService.refreshRequest(room, id);
     }
 }

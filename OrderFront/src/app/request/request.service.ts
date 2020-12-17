@@ -20,4 +20,8 @@ export class RequestService {
   getAllRooms(): Observable<Array<RoomPayload>>{
     return this.httpClient.get<Array<RoomPayload>>(this.url + 'room/find-all?pageNo=0&pageSize=10');
   }
+
+  selectRoom(room: RoomPayload, id: string): Observable<any>{
+    return this.httpClient.post(this.url + 'request/refresh/' + id, room);
+  }
 }
